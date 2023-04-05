@@ -7,7 +7,7 @@
 <p align="center">
 Script en Python 3 para migrar el Tracklist de una Emisión de BBC Radio / Sounds hacia una Playlist de Spotify
 
-Biblioteca Necesaria: python3 -m pip install spotipy
+Biblioteca Necesaria: python3 -m pip install spotipy\
 Colocar Id de Playlist en playlist.txt
 </p>
 <p align="center">

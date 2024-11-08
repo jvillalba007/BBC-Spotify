@@ -2,9 +2,10 @@
 import re
 import requests
 import spotipy
+import sys
 from spotipy.oauth2 import SpotifyOAuth
 
-url = input('BBC URL: ')
+url = sys.argv[1]
 regex = r"(https?:\/\/open.spotify.com\/(track|user|artist|album)\/[a-zA-Z0-9]+(\/playlist\/[a-zA-Z0-9]+|)|spotify:(track|user|artist|album):[a-zA-Z0-9]+(:playlist:[a-zA-Z0-9]+|))"
 data_html = ""
 tracks = ('')

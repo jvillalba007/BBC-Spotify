@@ -4,6 +4,7 @@ import os
 from bs4 import BeautifulSoup
 
 start = int(sys.argv[1]) if len(sys.argv) > 1 else 0
+end = int(sys.argv[2]) if len(sys.argv) > 2 else None
 BBC = True
 
 # URL del programa específico
@@ -19,7 +20,7 @@ container = soup.find('section', id='container_list')
 # Verificar si se encontró el contenedor y extraer la información de los episodios
 if container:
     episodes = container.find_all('div', class_='sw-grow sw--ml-2 m:sw--ml-4 sw-relative')
-    for episode in episodes[start:]:
+    for episode in episodes[start:end]:
         episode_url = episode.find('a')['href']
         episode_title = episode.find('a')['aria-label'].strip()
         full_url = f"https://www.bbc.co.uk{episode_url}"
